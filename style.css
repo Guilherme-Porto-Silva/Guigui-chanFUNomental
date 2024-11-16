@@ -1,0 +1,198 @@
+body{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+    background-image: url("./src/partyBackground.jpg");
+    background-repeat: repeat-y;
+    background-size: contain;
+ }
+section, header{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: space-around;
+    padding: 5%;
+}
+section{
+    width: 70%;
+    margin: 1%;
+    background-color: crimson;
+    outline-style: solid;
+    outline-width: 5px;
+    outline-color: aqua;
+     *{
+        color: yellow;
+        font-size: large;
+        font-family: "DynaPuff", cursive;
+        font-weight: 500;
+        margin: 0;
+        letter-spacing: 1px;
+        text-decoration: none;
+   }
+}
+header{
+    width: 90%;
+    margin: 5%;
+    div{
+    outline-style: solid;
+    outline-width: 5px;
+    outline-color: yellow;
+    width: 90%;
+    h1{margin: 0.5%;}
+}
+    ul::after{content: url("./src/minyDecoy.png");}
+}
+    ul{
+        margin: 1%;
+        padding: 1%;
+        list-style: none;
+    }
+main{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    img{
+        width: 40%;
+        margin: 0.5%;
+        background-color: yellow;
+        outline-style: solid;
+        outline-width: 3px;
+        outline-color: lime;
+    }
+    h1{
+        margin: 1%;
+        font-size: larger;
+    }
+}
+a{color: skyblue;}
+a:hover{color: lime;}
+.row{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.column{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 10px;
+    width: 90%;
+    p{
+        width: 130%;
+        margin: 10%;
+    }
+    img{
+        width: 50%;
+        margin: 0;
+    }
+}
+#descriptionTitle::before{
+    content: url("./src/confeteSplash.png");
+    display: block;
+}
+#childTitle::before{content: url("./src/babyBottle.png");}
+#BabysitterTitle{margin-left: -20%;}
+#BabysitterTitle::before{content: url("./src/cake-removebg-preview.png");}
+#bun::after{
+    content: url("./src/bunnyDecoy.png");
+    display: block;
+}
+#diamond0{
+    position: absolute;
+    left: 60%;
+    top: 21%;
+}
+@media (max-width: 830px) {
+    #diamond0{display: none;}
+    *{
+       font-size: medium;
+       font-weight: 100;
+  }
+  .row{flex-direction: column;}
+}
+/* Ajustes para telas médias (tablet) */
+@media (max-width: 1024px) {
+    section {
+        width: 80%;
+        padding: 3%;
+    }
+    header, main {align-items: center;}
+    h1 {font-size: large;}
+    #descriptionTitle, #childTitle, #BabysitterTitle {
+        margin-left: 0;
+        font-size: larger;
+    }
+    .row img {width: 60%;}
+    .column img {width: 70%;}
+}
+/* Ajustes para telas menores (celulares) */
+@media (max-width: 600px) {
+    body {
+        padding: 0;
+        background-size: cover;
+    }
+    section {
+        width: 95%;
+        padding: 5%;
+        margin: 0;
+    }
+    header div {width: 100%;}
+    main {align-items: center;}
+    h1 {
+        font-size: medium;
+        text-align: center;
+    }
+    .row, .column {
+        flex-direction: column;
+        align-items: center;
+        img{width: 80%;}
+    }
+    .column p {
+        width: 100%;
+        padding: 5%;
+    }
+    #descriptionTitle::before,
+    #childTitle::before,
+    #BabysitterTitle::before {
+        content: '';
+        display: none;
+    }
+    ul {padding: 0;}
+    ul::after {display: none;}
+}
+
+/* Ajustes para telas extremamente pequenas (celulares muito compactos) */
+@media (max-width: 500px) {
+    * {font-size: small;}
+    section, header, main {padding: 2%;}
+    .column{
+        img {width: 90%;}
+        p {
+            font-size: smaller;
+            margin: 5%;
+        }
+    }
+    .row img{width: 90%;}
+    #descriptionTitle, #childTitle, #BabysitterTitle {
+        font-size: medium;
+        margin: 0;
+        text-align: center;
+    }
+}
+@media (max-width: 370px) {
+    * {
+        font-size: smaller;
+        margin: 0;
+    }
+    section{padding: auto;}
+}
+@media screen and (max-height: 1480px) and (max-width: 1560px){#diamond0{top: 11%;}}
